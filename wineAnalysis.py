@@ -22,7 +22,10 @@ wine.to_csv("data/wine.csv", index=False)
 
 print(wine.info())  # 데이터의 기본 정보 확인
 
+wine.columns = wine.columns.str.replace(" ","_")
+# 열의 이름에 들어 있는 공백을 모두 '_'로 변경
 
+print(wine.info())  # 데이터의 기본 정보 확인
 
 
 
